@@ -48,8 +48,20 @@ The project is organized into the following sections:
 3. Cleaning of data is done based on the results and the irrelevant columns are kept as it is.
 4. Modified file is opened in Excel for quick data inspection and manual analysis.
 
-### Sales Dashboard
-
+### 2. Data Analysis & Report generation
+Given the dataset with columns related to electric vehicle (EV) population, here are some possible correlations you can explore as part of data analysis: 
+- **1. Producer Correlations**
+  - Used `Stacked Bar Charts` to show EV breakdown by Producer.
+- **2. Geographical Correlations**
+  - County/City/State vs. Electric Vehicle Type
+    Analyze how the distribution of different types of EVs (e.g., Battery Electric Vehicles, Plug-in Hybrid Electric Vehicles) varies across different geographic regions.
+  - County/City/State vs. Electric Range
+    Investigate if there's a regional preference for EVs with specific electric ranges.
+  - County/City/State vs. Clean Alternative Fuel Vehicle (CAFV) Eligibility
+    Explore how eligibility for clean alternative fuel vehicle incentives varies by region.
+  - County/City/State vs. Make/Model
+    Study the popularity of different EV makes and models in various regions.
+------------------------------------------------
 The Sales Dashboard is designed to provide an in-depth analysis of sales data, focusing on various factors that influence sales performance. Key features include:
 
 - **KPIs:** 
