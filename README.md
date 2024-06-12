@@ -43,7 +43,7 @@ The datasets used in this project are sourced from various public and open data 
 ## Project Structure
 The project is organized into the following sections:
 ### 1. Data Collection & Data Cleaning
-1. Electric_Vehicle_Population_Data. csv manually downloaded from Data.gov site. (File is attached)
+1. Electric_Vehicle_Population_Data. csv manually downloaded from Data.gov site. Search for EV Population data in the site (File is not attached)
 2. Before starting, to check the data quality we used python scripts in Jupyter Notebook. (File is attached)
 3. Cleaning of data is done based on the results and the irrelevant columns are kept as it is.
 4. Modified file is opened in Excel for quick data inspection and manual analysis.
