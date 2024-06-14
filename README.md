@@ -5,26 +5,17 @@ Working with Electric Vehicle data and associated data sets to create some impac
 Electric vehicles (EVs) are becoming increasingly popular as the world shifts towards more sustainable forms of transportation. This project aims to analyze various aspects of EV adoption, infrastructure, and market trends using publicly available data. By leveraging data analysis techniques, we can uncover insights into the factors driving EV adoption and the impact of EVs on the environment and infrastructure.
 
 ## Problem Statement
-The main objectives of this project are to:
+The main objectives of this project are to :
 
+- Identify and measure some of the relevant KPIs.
 - Analyze trends in EV adoption over time and across different regions.
-- Investigate the distribution and utilization of EV charging infrastructure.
-- Assess the impact of EVs on local power grids.
-- Segment the EV market based on consumer demographics and purchasing behavior.
-- Evaluate the environmental benefits of EV adoption.
-- Analyze the resale market trends for electric vehicles.
-- Develop predictive models for EV maintenance requirements.
 
 ## Tools & Technologies
 
 This project utilizes various tools and technologies to perform data collection, analysis, and visualization. The choice of tool depends on the specific requirements of each analysis task. 
 - **Python:** 
-  - Data Collection and Cleaning:
-  Python scripts and libraries like pandas and numpy are used for data collection, preprocessing, and cleaning.
-  - Exploratory Data Analysis (EDA):
-  Python notebooks with matplotlib, seaborn, and plotly are used for initial data exploration and visualization.
-  - Predictive Modeling:
-  Machine learning models are developed using Python libraries such as scikit-learn.
+  - Data Analysis and Validation:
+  Python scripts and libraries like pandas are used for data collection, preprocessing, and cleaning.
 - **Power BI:**
   - Interactive Dashboards:
   Power BI is used to create interactive dashboards for visualizing trends, geographic distributions, and other key metrics.
@@ -32,15 +23,14 @@ This project utilizes various tools and technologies to perform data collection,
   Power BI integrates data from various sources to provide comprehensive and interactive reports.
 - **Excel:**
   - Data Inspection and Manual Analysis:
-Excel is used for initial data inspection, manual data analysis, and simple visualizations.
-  - Pivot Tables and Charts:
-Excel's pivot tables and charts are used to summarize and visualize data quickly.
+ Excel is used for initial data inspection, manual data analysis, and simple visualizations.
 
 ## Data Sources
 The datasets used in this project are sourced from various public and open data platforms, including:
-- Data.gov
+- Data.gov\
+- AFDC Fuel Station Locator - https://afdc.energy.gov/data_download
 
-## Project Structure
+## Project Steps
 The project is organized into the following sections:
 ### 1. Data Collection & Data Cleaning
 1. Electric_Vehicle_Population_Data. csv manually downloaded from Data.gov site. Search for EV Population data in the site (File is not attached)
@@ -49,90 +39,31 @@ The project is organized into the following sections:
 4. Modified file is opened in Excel for quick data inspection and manual analysis.
 
 ### 2. Data Analysis & Report generation
-Given the dataset with columns related to electric vehicle (EV) population, here are some possible correlations you can explore as part of data analysis: 
-- **1. Producer Correlations**
-  - Used `Stacked Bar Charts` to show EV breakdown by Producer.
-- **2. Geographical Correlations**
-  - County/City/State vs. Electric Vehicle Type
-    Analyze how the distribution of different types of EVs (e.g., Battery Electric Vehicles, Plug-in Hybrid Electric Vehicles) varies across different geographic regions.
-  - County/City/State vs. Electric Range
-    Investigate if there's a regional preference for EVs with specific electric ranges.
-  - County/City/State vs. Clean Alternative Fuel Vehicle (CAFV) Eligibility
-    Explore how eligibility for clean alternative fuel vehicle incentives varies by region.
-  - County/City/State vs. Make/Model
-    Study the popularity of different EV makes and models in various regions.
-------------------------------------------------
-The Sales Dashboard is designed to provide an in-depth analysis of sales data, focusing on various factors that influence sales performance. Key features include:
 
-- **KPIs:** 
-  - Total Sales
-  - Total Quantity of Products
-  - Total Profit
-  - Average Delivery Time
+Given the dataset with columns related to electric vehicle (EV) population, here are some metrics & possible correlations that I tried to explore as part of data analysis:
+- **1. KPIs**
+  - Used Card visuals to show the below relevant Key Performance metrices.
+    ![image](https://github.com/SteffyJacob/ElectricVehicleDataAnalysis/assets/69688793/216340d4-9461-4274-aaeb-716cef36e891)
 
-- **Visualizations:**
-  - **Stacked Area Charts:** Compare sales and profit across different years.
-  - **Category Analysis:** Breakdown of sales by category and sub-category.
-  - **Geographical Analysis:** Sales performance across different regions.
-  - **Shipping Analysis:** Impact of different ship modes on sales.
-  - **Segment Analysis:** Sales distribution across various customer segments.
+- **2. EV Adoption over the years**
+  - To display the growth of EV adoption over the years, line chart visualization is used.
+    ![image](https://github.com/SteffyJacob/ElectricVehicleDataAnalysis/assets/69688793/61090d4d-98ad-48e5-83f0-5af8e5da8815)
+    
+- **3. Adoption rates of BEVs versus PHEVs over the years**
+  - To highlight how the adoption of different types of electric vehicles (e.g., BEV - Battery Electric Vehicles, PHEV - Plug-in Hybrid Electric Vehicles) has changed over      time, we have used line chart visual
+    ![image](https://github.com/SteffyJacob/ElectricVehicleDataAnalysis/assets/69688793/fc4e0c07-6a4f-4522-82bb-cc19eaf6e8d2)
 
-### Sales Forecasting
+- **4. EVs by Maker & Model**
+  - To compare counts of EVs across different makers over the years, we have used a stacked column chart. From this visual, it is evident that TESLA has been the leading        with even a drill down to specifically show the number of vehicles per model each year.
+    ![image](https://github.com/SteffyJacob/ElectricVehicleDataAnalysis/assets/69688793/2afe1ecd-27b5-457b-bfeb-e87a7884b649)
 
-The Sales Forecasting page utilizes time series analysis techniques to forecast future sales trends. This includes:
+- **5. Price & Range relationships of different EVs**
+  - To explore the relationship between the price and range of different EVs, I used scatter plot where Electric Range reported on the x-axis, Base MSRP on the y-axis, with 
+    points colored by Make. This visual shows that Tesla offers the highest range even though it’s base MSRP is still same to many other manufactures, in a way proving why 
+    Tesla is the most popular EV in the market.
+    ![image](https://github.com/SteffyJacob/ElectricVehicleDataAnalysis/assets/69688793/fdaa18bd-5c34-4991-926b-21ddb8f43473)
 
-- **Time Series Decomposition:** Breaking down the sales data into trend, seasonal, and residual components.
-- **Forecast Models:** Applying predictive models to provide accurate sales forecasts.
-
-## Getting Started
-
-### Prerequisites
-
-- **Power BI Desktop:** Ensure you have the latest version of Power BI Desktop installed on your machine.
-- **Superstore Sales Data:** Ensure you have the `superstore_sales.csv` file containing the sales data from 2020 to 2023.
-  
-### Steps to Create the Sales Dashboard
-1. **Load the Data:**
-   - Open Power BI Desktop.
-   - Click on `Get Data` and select `Text/CSV`.
-   - Navigate to the location of the `Superstore 2023.csv` file and load it into Power BI.
-
-2. **Data Cleaning and Transformation:**
-   - Go to the `Transform Data` option to open the Power Query Editor.
-   - Check for any missing or inconsistent data and clean it as needed. Especially the date fields had a mix of mm/dd/yyyy and dd/mm/yyyy format entries. So I did the data transformation using M- Query to fix the data error.
-   - Ensure data types are correctly set (e.g., dates as Date type, sales as Currency type).
-
-3. **Create Relationships (if necessary):**
-   - Here there was only one dataset. So, no relationships were created.
-
-4. **Design the Sales Dashboard:**
-   - **KPIs:** 
-     - Use `Card` visualizations to display Total Sales, Total Quantity of Products, Total Profit, and Average Delivery Time.
-   - **Stacked Area Charts:**
-     - Created `Stacked Area Charts` to compare Sales and Profit year-over-year.
-   - **Category Analysis:**
-     - Used `Clustered Bar Charts` to show sales breakdown by Category and Sub-Category.
-   - **Geographical Analysis:**
-     - Used `Map` visualizations to display sales performance across different regions.
-   - **Shipping Analysis:**
-     - Created `Bar Charts` to analyze the impact of different Ship Modes on sales.
-   - **Segment Analysis:**
-     - Used `Donut Charts` to display sales distribution across various Customer Segments.
-
-5. **Create the Sales Forecasting Page:**
-   - Used `Line Charts` to visualize and analyze sales trends.
-   - Applied `Forecasting` features available in Power BI to predict future sales.
-
-6. **Finalize and Publish:**
-   - Reviewed and finalized the dashboard layout and visualizations.
-   - Saved the Power BI report file as `Retail Store Sales Dashboard.pbix`and uploaded to the repository.
-
-### Snapshots of the report screens with visuals mentioned earlier
-1. **Sales Dashboard**
-   ![Screenshot 2024-06-06 190823](https://github.com/SteffyJacob/PowerBIDashboard-1/assets/69688793/f1385461-0cff-43ae-a1d8-b45db22c8931)
-   
-3. **Sales Dashboard-Region Slicer applied**
-   ![Screenshot 2024-06-06 191522](https://github.com/SteffyJacob/PowerBIDashboard-1/assets/69688793/96bfdf61-2d72-4280-8487-1b4dc2d53f92)
-   
-5. **Sales Forecasting**
-   ![Screenshot 2024-06-06 190922](https://github.com/SteffyJacob/PowerBIDashboard-1/assets/69688793/ebc8ba41-39d2-4df4-b222-4e389f931087)
+- **6. Distribution of Electric Vehicles & Charging Stations**
+  - From the EV Population data file, by parsing the Vehicle Location field into Latitude and Longitude, I used map visual to show spatial distribution of EV vehicles.          Similarly, I used a data file downloaded from public site to get AFDC Fuel Station Locator data, which is then filtered just for US to show some insights on the  
+    distribution of EV charging station across different states in US.
+    ![image](https://github.com/SteffyJacob/ElectricVehicleDataAnalysis/assets/69688793/2f0708d9-7f60-43f5-81e4-9ad617671494)
